@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  docs:
+    image: docs-gen-docker_docs:latest
+    volumes:
+      - ./dist:/opt/rf-docs/dist
+    ports:
+      - "127.0.0.1:4200:4200"
+    expose:
+      - 4200
+    entrypoint: yarn
+    command: run start

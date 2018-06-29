@@ -2,10 +2,11 @@
 
 # compiled output
 /dist
-/tmp
+/docs-gen-docker/dist
+/docs-gen-docker/tmp
 
 # dependencies
-/node_modules
+docs-gen-docker//node_modules
 
 # IDEs and editors
 /.idea
@@ -31,11 +32,11 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
-/typings
+/docs-gen-docker/typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+/docs-gen-docker/e2e/*.js
+/docs-gen-docker/e2e/*.map
 
 #System Files
 .DS_Store

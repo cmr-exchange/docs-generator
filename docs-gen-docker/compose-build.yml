@@ -1,0 +1,22 @@
+version: '2.1'
+services:
+  base:
+    build:
+      context: ./base/
+      dockerfile: Dockerfile
+  yarn:
+    depends_on:
+      - "base"
+    build:
+      context: ./yarn/
+      dockerfile: Dockerfile
+  docs:
+    depends_on:
+      - "yarn"
+    build:
+      context: ./docs/
+      dockerfile: Dockerfile
+    volumes:
+      - ./dist:/opt/rf-docs/dist
+    entrypoint: yarn
+    command: run build
